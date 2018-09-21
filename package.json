@@ -1,6 +1,6 @@
 {
   "name": "only-changed-jest-watch-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Will Ogden <will.ogden@gmail.com>",
   "description": "Jest watch plugin for running either only the modified test (for TDD), or tests of dependant modules",
   "repository": {
