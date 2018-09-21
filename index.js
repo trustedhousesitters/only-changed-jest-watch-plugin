@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const glob = require("glob");
 const dependencyTree = require('dependency-tree');
 
@@ -20,7 +21,8 @@ class OnlyChangedJestWatchPlugin {
             // Get dependencies
             const list = dependencyTree.toList({
                 filename: file,
-                directory: rootDir
+                directory: rootDir,
+                filter: path => path.indexOf('node_modules') === -1,
             });
 
             // Invert dependencies
